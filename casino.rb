@@ -1,17 +1,23 @@
 # --------------------------------------------------------------------------
 # Start game player has a name and an initial bankroll
 def welcome_screen
+  puts render_ascii_art
   puts "Welcome to DPL Casino! Enter at your own risk!"
   puts "What is your name?"
   user_input = gets.strip
   puts "Welcome, #{user_input}!"
   puts "Shall we play a game? How much money would you like to play with today?"
-  user_bankroll = gets.strip.to_i
-  puts "Big money! Your starting bankroll is: $#{user_bankroll}"
+  user_bankroll
+  puts "Big money! Your starting bankroll is: $#{@wallet}"
   puts "What do you want to play?"
   game_floor
 end
 
+def render_ascii_art
+  File.readlines("dice_art.txt") do |line|
+    puts line
+  end
+end
 
 # --------------------------------------------------------------------------
 # Player can go to different games via menu
@@ -36,11 +42,11 @@ end
 # --------------------------------------------------------------------------
 # Player places bet and wins or loses (hint: rand)
 
-
-
-
 # --------------------------------------------------------------------------
 # Player's bankroll goes up and down with wins and losses
+def user_bankroll
+  @wallet = gets.strip.to_i
+end
 
 
 
