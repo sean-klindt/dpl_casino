@@ -7,3 +7,4 @@ class Blackjack
   @wallet.subtract_money(bid)
 
   end
+end

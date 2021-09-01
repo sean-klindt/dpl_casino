@@ -2,6 +2,9 @@ require_relative 'wallet.rb'
 require_relative 'roulette.rb'
 require_relative 'blackjack.rb'
 require_relative 'high_low.rb'
+require_relative 'deck.rb'
+require_relative 'card.rb'
+require_relative 'dice.rb'
 require_relative 'slots.rb'
 
     # --------------------------------------------------------------------------
@@ -69,7 +72,7 @@ require_relative 'slots.rb'
       elsif user_input == 2
         puts "Roulette" #@roulette = Roulette.new(@wallet)
       elsif user_input == 3
-        High_Low.new(@wallet)
+        puts "High/Low" #@ligh_low = High_Low.new(@wallet)
       elsif user_input == 4
         puts "Slots" #@slots = Slots.new
       elsif user_input == 5
