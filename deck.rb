@@ -1,3 +1,5 @@
+require_relative 'card'
+
 class Deck
   # Getter and Setter methods for rank, suit and color
   attr_accessor :cards
@@ -16,7 +18,7 @@ class Deck
   end
   
   def pull_card
-    shuffle_cards.first_card
+    shuffle_cards.first
   end
   
   def generate_deck

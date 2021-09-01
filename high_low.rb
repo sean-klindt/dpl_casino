@@ -21,22 +21,34 @@ class High_Low
       if guess == 'higher'
         if is_correct = first_card.to_i <= second_card.to_i
           puts "You won!"
+          @wallet.add_money(wager)
+          puts "New bankroll balance: $#{@wallet.current_balance}"
+          puts
+          game_floor
         else
           puts "You lost!"
+          @wallet.subtract_money(wager) if !is_correct
+          puts "New bankroll balance: $#{@wallet.current_balance}"
+          puts
+          game_floor
         end
-        @wallet.subtract_money(wager) if !is_correct
-        @wallet.add_money(wager)
       else
         if is_correct = first_card.to_i > second_card.to_i
           puts "You won!"
+          @wallet.add_money(wager)
+          puts "New bankroll balance: $#{@wallet.current_balance}"
+          puts
+          game_floor
         else
           puts "You lost!"
+          @wallet.subtract_money(wager) if !is_correct
+          puts "New bankroll balance: $#{@wallet.current_balance}"
+          puts
+          game_floor
         end
-        @wallet.subtract_money(wager) if !is_correct
-        @wallet.add_money(wager)
       end
     else
-      puts "*slowly escorted out of casino by armed guards*"
+      puts "*slowly escorted out of casino by armed guards, and asked to never return*"
       return
     end
   end

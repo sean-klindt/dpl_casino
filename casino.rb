@@ -16,6 +16,7 @@ require_relative 'slots.rb'
       money = gets.strip.to_i
       @wallet = Wallet.new(money)
       if @wallet.validate_money(money)
+        puts
         puts "Big money! Your starting bankroll is: $#{@wallet.current_balance}"
         puts "What would you like to do now?"
         main_menu
@@ -41,14 +42,15 @@ require_relative 'slots.rb'
       if user_input == 1
         game_floor
       elsif user_input == 2
-      money = gets.strip.to_i
-      @wallet = Wallet.new(money)
+        puts
+        puts "How much money would you like too add?"
+        money = gets.strip.to_i
         if @wallet.validate_money(money)
-        @wallet.add_money(money)
-        puts "Higher risks = higher rewards! Your bankroll is now: $#{@wallet.current_balance}"
-        main_menu
-        else puts "Invalid amount. Try again."
-        main_menu
+          @wallet.add_money(money)
+          puts "Higher risks = higher rewards! Your bankroll is now: $#{@wallet.current_balance}"
+          main_menu
+          else puts "Invalid amount. Try again."
+          main_menu
         end
       elsif user_input == 3
         puts "Thanks for visiting DPL Casino!"
