@@ -1,13 +1,14 @@
 require_relative 'wallet.rb'
 
-class Dice_Game
+class High_Low
   def initialize(wallet)
    @wallet = wallet
    play
   end
 end
 
-def play_dice
+
+  def play
     roll
       end
         puts "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_"
@@ -54,4 +55,3 @@ def play_dice
     puts "HOW MUCH MORE DO YOU WANT TO LOSE??"
     roll
   end
-end

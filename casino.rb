@@ -1,8 +1,7 @@
 require_relative 'wallet.rb'
-require_relative 'dice_game.rb'
 require_relative 'blackjack.rb'
 require_relative 'high_low.rb'
-require_relative 'slots.rb'
+# require_relative 'dice_game.rb'
 
     # --------------------------------------------------------------------------
     # Start game player has a name and an initial bankroll
@@ -88,11 +87,6 @@ require_relative 'slots.rb'
 
     # --------------------------------------------------------------------------
     # Player's bankroll goes up and down with wins and losses
-
-
-
-
-
 
 
     welcome_screen
