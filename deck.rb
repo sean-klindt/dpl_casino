@@ -36,4 +36,8 @@ class Deck
        puts "#{card.rank} #{card.suit} (#{card.color})"
      end
    end
+
+   def deal
+    @cards.pop
+   end
  end

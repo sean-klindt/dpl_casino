@@ -17,16 +17,17 @@ class High_Low
       puts "The card is #{first_card}"
       print "(higher/lower): "
       guess = gets.strip.downcase
+      puts
       puts "The second card is #{second_card}"
       if guess == 'higher'
         if is_correct = first_card.to_i <= second_card.to_i
-          puts "You won!"
+          puts "-- You won! --"
           @wallet.add_money(wager)
           puts "New bankroll balance: $#{@wallet.current_balance}"
           puts
           game_floor
         else
-          puts "You lost!"
+          puts "-- You lost! -- "
           @wallet.subtract_money(wager) if !is_correct
           puts "New bankroll balance: $#{@wallet.current_balance}"
           puts
@@ -34,13 +35,13 @@ class High_Low
         end
       else
         if is_correct = first_card.to_i > second_card.to_i
-          puts "You won!"
+          puts "-- You won! --"
           @wallet.add_money(wager)
           puts "New bankroll balance: $#{@wallet.current_balance}"
           puts
           game_floor
         else
-          puts "You lost!"
+          puts "-- You lost! --"
           @wallet.subtract_money(wager) if !is_correct
           puts "New bankroll balance: $#{@wallet.current_balance}"
           puts
@@ -55,8 +56,8 @@ class High_Low
 
 
 
-  def high_low_game
-  @wallet.subtract_money(bid)
+  # def high_low_game
+  # @wallet.subtract_money(bid)
   
-  end
+  # end
 end

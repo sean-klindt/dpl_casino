@@ -1,5 +1,5 @@
 require_relative 'wallet.rb'
-require_relative 'roulette.rb'
+require_relative 'dice_game.rb'
 require_relative 'blackjack.rb'
 require_relative 'high_low.rb'
 require_relative 'slots.rb'
@@ -61,15 +61,15 @@ require_relative 'slots.rb'
     def game_floor
       puts "----GAME FLOOR----"
       puts "1. Blackjack / 21"
-      puts "2. Roulette"
+      puts "2. Dice"
       puts "3. High/Low"
       puts "4. Slots"
       puts "5. Return to Main Menu"
       user_input = gets.strip.to_i
       if user_input == 1
-        puts "Blackjack" #@blackjack = Blackjack.new(@wallet)
+        Blackjack.new(@wallet)
       elsif user_input == 2
-        puts "Roulette" #@roulette = Roulette.new(@wallet)
+        Dice_Game.new(@wallet)
       elsif user_input == 3
         High_Low.new(@wallet)
       elsif user_input == 4
