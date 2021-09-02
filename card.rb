@@ -9,7 +9,7 @@ class Card
     @color = color
   end
 
-  def value
+  def to_i
     case @rank
     when 'A'
       return 1

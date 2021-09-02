@@ -1,7 +1,7 @@
+# require_relative 'dice_game.rb'
 require_relative 'wallet.rb'
 require_relative 'blackjack.rb'
 require_relative 'high_low.rb'
-# require_relative 'dice_game.rb'
 
     # --------------------------------------------------------------------------
     # Start game player has a name and an initial bankroll
@@ -62,8 +62,7 @@ require_relative 'high_low.rb'
       puts "1. Blackjack / 21"
       puts "2. Dice"
       puts "3. High/Low"
-      puts "4. Slots"
-      puts "5. Return to Main Menu"
+      puts "4. Return to Main Menu"
       user_input = gets.strip.to_i
       if user_input == 1
         Blackjack.new(@wallet)
@@ -72,8 +71,6 @@ require_relative 'high_low.rb'
       elsif user_input == 3
         High_Low.new(@wallet)
       elsif user_input == 4
-        puts "Slots" #@slots = Slots.new
-      elsif user_input == 5
         main_menu
       else 
         puts "Invalid input. Please choose 1, 2, 3, 4, or 5."
@@ -89,4 +86,4 @@ require_relative 'high_low.rb'
     # Player's bankroll goes up and down with wins and losses
 
 
-    welcome_screen
+welcome_screen

@@ -11,9 +11,9 @@ class Hand
   def hand_value
     value = 0
     @cards.each do |card|
-      value += card.value
+      value += card.to_i
     end
     value
   end
-  
+
 end
