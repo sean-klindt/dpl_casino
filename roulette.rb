@@ -7,3 +7,4 @@ class Roulette
   @wallet.subtract_money(bid)
   
   end
+end
